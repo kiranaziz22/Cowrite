@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning db..."
+Story.destroy_all
+puts "Creating db..."
+
+user1 = User.create(email: "email@gmail.com", password: "123456", password_confirmation: "123456")
+user1.save
+
+story1 = Story.create(title: "Haunted", genre: "Horror", content: "just said it was scary", synopsis: "Such a scary story", user_id: user1.id)
+story1.save
+
+story2 = Story.create(title: "Haunteeed", genre: "Horror", content: "again just said it was scary", synopsis: "Also uch a scary story", user_id: user1.id)
+story2.save
+
+puts "Done!"

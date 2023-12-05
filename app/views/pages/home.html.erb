@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in </p>
+<div class="home-banner">
+    <h1>Welcom to CoWrite</h1>
+</div>
+<div class="container">
+  <div class="page-content">
+    <div class="top-stories">
+      <p><a href="<%= stories_path %>">Stories index</a></p>
+      <h4>Top stories</h4>
+      <div class="cards">
+        <% @stories.each do |story| %>
+          <a href="<%= story_path(story.id)%>" class="story-card">
+            <h3><%= story.title %></h3>
+            <p><%= story.synopsis %></p>
+          </a>
+        <% end %>
+      </div>
+    </div>
+    <div class="home-actions">
+      <p>dude</p>
+    </div>
+  </div>
+</div>

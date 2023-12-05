@@ -1,0 +1,29 @@
+.home-banner {
+  background-image: url("green_banner.webp");
+  padding: 70px;
+  padding-top: 180px;
+  color: #FFFFFF;
+  background-size: cover;
+}
+
+.container {
+  margin: 15px;
+}
+
+.page-content {
+  display: flex;
+  gap: 15px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.story-card {
+  padding: 10px;
+  border: 2px solid #3A4D39;
+  text-decoration: none;
+  color: black;
+}

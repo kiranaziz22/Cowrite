@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts "Cleaning db..."
+Story.destroy_all
+puts "Creating db..."
+
+story1 = Story.create(title: "Haunted", genre: "Horror", content: "just said it was scary", synopsis: "Such a scary story")
+story1.save
+
+story2 = Story.create(title: "Haunteeed", genre: "Horror", content: "again just said it was scary", synopsis: "Also uch a scary story")
+story2.save
+
+puts "Done!"

@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @stories = Story.all
-  
+
   end
 
   def new
@@ -16,8 +16,12 @@ class StoriesController < ApplicationController
   def create
     @story = Story.new(story_params)
     @story.user = current_user
+    if
     @story.save
     redirect_to story_path(@story)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_06_143215) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "collabs", force: :cascade do |t|
     t.text "content"
     t.bigint "user_id", null: false
@@ -62,14 +68,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
     t.index ["user_id"], name: "index_collabs_on_user_id"
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "username"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_profiles_on_user_id"
-  end
-
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "genre"
@@ -78,6 +76,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_stories_on_category_id"
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
@@ -91,6 +91,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -99,6 +100,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_152455) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "collabs", "stories"
   add_foreign_key "collabs", "users"
-  add_foreign_key "profiles", "users"
+  add_foreign_key "stories", "categories"
   add_foreign_key "stories", "users"
 end

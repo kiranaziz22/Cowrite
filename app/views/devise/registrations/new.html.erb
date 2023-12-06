@@ -20,7 +20,9 @@
                 input_html: { autocomplete: "first_name" } %>
     <%= f.input :last_name,
                 required: true,
+
                 input_html: { autocomplete: "last_name" } %>
+    <%= f.input :photo, as: :file, required: false %>
   </div>
 
   <div class="form-actions">

@@ -1,0 +1,5 @@
+<h1>All genres</h1>
+
+<% @categories.each do |category| %>
+  <p><a href="<%= category_path(category.id)%>"><%= category.genre %></a></p>
+<% end %>

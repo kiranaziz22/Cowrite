@@ -1,0 +1,13 @@
+
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<h2>My Stories</h2>
+<% @user_stories.each do |story| %>
+<%= link_to story.title, story_path(story)  %>
+<% end %>
+     <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key, height: 400, width: 400, crop: :fill, style:"border-radius: 50%;" %>
+            <% else %>
+            <%= link_to "Edit profile", edit_user_registration_path %>
+
+            <% end %>

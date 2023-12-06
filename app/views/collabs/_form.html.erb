@@ -1,5 +1,6 @@
-<%= simple_form_for(collab) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <!-- [...] -->
-<% end %>
+
+
+ <%= simple_form_for [story,collab] do |f| %>
+    <%= f.rich_text_area :rich_content %>
+     <%= f.submit %>
+     <% end %>

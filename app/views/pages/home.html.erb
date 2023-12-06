@@ -26,7 +26,7 @@
         </a>
       <% end %>
       <div class="categories-card" >
-        <h3>All categories</h3>
+        <a href="<%= categories_path %>"><h3>Genres</h3></a>
         <div class="categories-cards">
           <% @categories.each do |category| %>
             <a href="<%= category_path(category.id) %>" class="category-card" >

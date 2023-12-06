@@ -9,6 +9,7 @@
 #   end
 
 puts "Cleaning db..."
+Collab.destroy_all
 Story.destroy_all
 User.destroy_all
 Category.destroy_all
@@ -26,7 +27,7 @@ category2.save
 story1 = Story.create(title: "Haunted", genre: "Horror", content: "just said it was scary", synopsis: "Such a scary story", user_id: user1.id, category_id: category1.id)
 story1.save
 
-story2 = Story.create(title: "Haunteeed", genre: "Horror", content: "again just said it was scary", synopsis: "Also uch a scary story", user_id: user1.id, category_id: category1.id)
+story2 = Story.create(title: "Haunteeed", genre: "Thriller", content: "again just said it was scary", synopsis: "Also uch a scary story", user_id: user1.id, category_id: category2.id)
 story2.save
 
 

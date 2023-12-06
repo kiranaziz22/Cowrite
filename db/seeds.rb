@@ -11,7 +11,7 @@ puts "Cleaning db..."
 Story.destroy_all
 puts "Creating db..."
 
-user1 = User.create(email: "email@gmail.com", password: "123456", password_confirmation: "123456")
+user1 = User.create(first_name: "Jonny", last_name: "Dunseath", username: "Beatwrecka", email: "email@gmail.com", password: "123456", password_confirmation: "123456")
 user1.save
 
 story1 = Story.create(title: "Haunted", genre: "Horror", content: "just said it was scary", synopsis: "Such a scary story", user_id: user1.id)

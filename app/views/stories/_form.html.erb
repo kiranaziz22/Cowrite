@@ -1,9 +1,6 @@
-<%= simple_form_for(story) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <!-- [...] -->
-<% end %>
+
    <%= simple_form_for story do |f| %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :title %>
     <%= f.input :genre %>
     <%= f.input :synopsis %>

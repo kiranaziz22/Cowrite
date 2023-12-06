@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @stories = Story.all
+  
   end
 
   def new
@@ -19,7 +20,13 @@ class StoriesController < ApplicationController
     redirect_to story_path(@story)
   end
 
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    redirect_to stories_path, status: :see_other
+  end
+
   def story_params
-    params.require(:story).permit(:title,:rich_content, :genre, :synopsis, photos: [])
+    params.require(:story).permit(:title, :rich_content, :genre, :synopsis, photos: [])
   end
 end

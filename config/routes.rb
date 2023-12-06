@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :stories
   resources :collabs
+  resources :categories
 end

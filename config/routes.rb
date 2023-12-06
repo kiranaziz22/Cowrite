@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :collabs, only: [:new, :create]
    end
   resources :categories
+  resources :profiles
 end

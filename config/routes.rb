@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :stories, only: [:new, :create, :show, :index, :destroy] do
     resources :collabs, only: [:new, :create]
    end
-  end
+  resources :categories
+end

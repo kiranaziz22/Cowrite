@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_many :stories
   has_one_attached :photo
   has_many :collabs
+  acts_as_voter
   has_many :reviews
 end

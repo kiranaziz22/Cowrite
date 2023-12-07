@@ -1,14 +1,14 @@
 <% @story.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, radius: 5 %>
 <% end %>
-<h1><%= @story.title %></h1>
-<h4><%= @story.genre %></h4>
-<h6><%= @story.synopsis %></h6>
+<h1><strong>Title : </strong> <%= @story.title %></h1>
+<h6><strong>Genre : </strong><%= @story.genre %></h6>
+<h6><strong>Synopsis : </strong> <%= @story.synopsis %></h6>
 <p><%= @story.content %></p>
 <p><%= @story.rich_content %></p>
 
 <% @story.collabs.each do |collab| %>
-  <%= collab.user.first_name%> <%= collab.user.last_name%>
+  <h5><strong>By: </strong><%= collab.user.first_name%> <%= collab.user.last_name%></h5>
   <li class="list-group-item"><%= collab.rich_content %>
   </li>
 <% end %>

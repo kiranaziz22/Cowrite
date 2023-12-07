@@ -4,4 +4,5 @@ class Story < ApplicationRecord
   has_many_attached :photos
   has_rich_text :rich_content
   has_many :collabs
+  has_many :reviews, dependent: :destroy
 end

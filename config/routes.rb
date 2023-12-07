@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :stories, only: [:new, :create, :show, :index, :destroy] do
     resources :collabs, only: [:new, :create]
+    resources :reviews, only: [:new, :create]
    end
   resources :categories
   resources :profiles

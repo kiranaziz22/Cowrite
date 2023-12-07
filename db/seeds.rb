@@ -11,7 +11,7 @@
 puts "Cleaning db..."
 Collab.destroy_all
 Story.destroy_all
-User.destroy_all
+# User.destroy_all
 Category.destroy_all
 puts "Creating db..."
 

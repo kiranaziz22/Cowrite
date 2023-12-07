@@ -1,7 +1,9 @@
 .home-banner {
   background-image: url("green_banner.webp");
   padding: 70px;
-  padding-top: 180px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
   color: #FFFFFF;
   background-size: cover;
 }
@@ -47,13 +49,14 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
+  margin-top: 36px;
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   text-decoration: none;
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
 }
 
-.categories-card {
+.categories-card-hp {
   width: 650px;
   height: 170px;
   display: flex;
@@ -66,9 +69,40 @@
   text-decoration: none;
 }
 
-.categories-cards {
+.categories-cards-hp {
+  width: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
   place-items: center;
+}
+
+.category-card-hp {
+  color: #FFFFFF;
+  background-color: #4F6F52;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.genres-txt {
+  color: #000000;
+}
+
+.create-button {
+  color: #FFFFFF;
+  background-color: #4F6F52;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wic {
+  padding: 10px;
+  background-color: #D9D9D9;
 }

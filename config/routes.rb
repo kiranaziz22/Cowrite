@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,12 +10,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
   resources :stories, only: [:new, :create, :show, :index, :destroy] do
     resources :collabs, only: [:new, :create]
     member do
       put "like" => "stories#upvote"
       put "unlike" => "stories#downvote"
     end
+    resources :reviews, only: [:new, :create]
    end
   resources :categories
   resources :profiles

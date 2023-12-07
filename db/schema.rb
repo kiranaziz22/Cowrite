@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema[7.1].define(version: 2023_12_07_145042) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +70,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_07_145042) do
     t.index ["user_id"], name: "index_collabs_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "comment"
+    t.bigint "story_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["story_id"], name: "index_reviews_on_story_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "genre"
@@ -116,6 +128,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_07_145042) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "collabs", "stories"
   add_foreign_key "collabs", "users"
+  add_foreign_key "reviews", "stories"
+  add_foreign_key "reviews", "users"
   add_foreign_key "stories", "categories"
   add_foreign_key "stories", "users"
 end

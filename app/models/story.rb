@@ -5,4 +5,5 @@ class Story < ApplicationRecord
   has_rich_text :rich_content
   has_many :collabs
   acts_as_votable
+  has_many :reviews, dependent: :destroy
 end

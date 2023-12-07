@@ -20,7 +20,7 @@
 <p><%= @story.rich_content %></p>
 
 <% @story.collabs.each do |collab| %>
-  <h5><strong>By: </strong><%= collab.user.first_name%> <%= collab.user.last_name%></h5>
+ <h5> By: <%= link_to "#{collab.user.first_name} #{collab.user.last_name}" , profile_path(collab.user)  %></h5>
   <li class="list-group-item"><%= collab.rich_content %>
   </li>
 <% end %>
@@ -32,3 +32,10 @@
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
 <p><a href="<%= stories_path %>">Stories index</a></p>
+<p><%= link_to "Add a Review", new_story_review_path(@story) %></p>
+<ul class="list-group">
+  <% @story.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.comment %> By: <%= review.user.first_name%> <%= review.user.last_name%></li>
+  <% end %>
+</ul>
+<br>

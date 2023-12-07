@@ -6,7 +6,6 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @stories = Story.all
-
   end
 
   def new
@@ -32,5 +31,17 @@ class StoriesController < ApplicationController
 
   def story_params
     params.require(:story).permit(:title, :rich_content, :genre, :category_id, :synopsis, photos: [])
+  end
+
+  def upvote
+    @story = Story.find(params[:id])
+    @story.upvote_from current_user
+    redirect_to story_path(@story)
+  end
+
+  def downvote
+    @story = Story.find(params[:id])
+    @story.downvote_from current_user
+    redirect_to story_path(@story)
   end
 end

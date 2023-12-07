@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :stories, only: [:new, :create, :show, :index, :destroy] do
     resources :collabs, only: [:new, :create]
+    member do
+      put "like" => "stories#upvote"
+      put "unlike" => "stories#downvote"
+    end
    end
   resources :categories
   resources :profiles

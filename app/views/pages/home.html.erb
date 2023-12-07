@@ -8,8 +8,13 @@
       <div class="stories-cards">
         <% @stories.each do |story| %>
           <a href="<%= story_path(story.id)%>" class="story-card">
-            <h3><%= story.title %></h3>
-            <p><%= story.synopsis %></p>
+            <div>
+              <%= cl_image_tag story.photos.first.key, width:100, height:100, crop: :fill %>
+            </div>
+            <div>
+              <h3><%= story.title %></h3>
+              <p><%= story.synopsis %></p>
+            </div>
           </a>
         <% end %>
       <p><a href="<%= stories_path %>">See all stories</a></p>

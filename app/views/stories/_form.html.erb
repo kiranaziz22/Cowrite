@@ -3,6 +3,7 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :title %>
     <%= f.input :genre %>
+    <%= f.association :category %>
     <%= f.input :synopsis %>
     <%= f.rich_text_area :rich_content %>
     <%= f.submit %>

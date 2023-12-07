@@ -25,20 +25,22 @@
           <h3>Connect !</h3>
         </a>
       <% end %>
-      <div class="categories-card" >
-        <a href="<%= categories_path %>"><h3>Genres</h3></a>
-        <div class="categories-cards">
+      <div class="categories-card-hp" >
+        <a href="<%= categories_path %>" class="genres-txt"><h3>Genres</h3></a>
+        <div class="categories-cards-hp">
           <% @categories.each do |category| %>
-            <a href="<%= category_path(category.id) %>" class="category-card" >
-              <p><%= category.genre  %></p>
+            <a href="<%= category_path(category.id) %>" class="category-card-hp" >
+              <%= category.genre  %>
             </a>
           <% end %>
         </div>
       </div>
-      <a href="<%= new_story_path %>" >
-        <h3>Create a new story !</h3>
-      </a>
-      <h3>What is CoWrite</h3>
+      <h3><a href="<%= new_story_path %>" class="create-button" >
+        Create a new story !
+      </a></h3>
+      <div class="wic">
+        <h3>What is CoWrite</h3>
+      </div>
     </div>
   </div>
 </div>

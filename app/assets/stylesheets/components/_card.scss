@@ -1,12 +1,18 @@
-.container {
-  display: grid;
-  flex-direction:column;
+.category-card-container {
+  display: flex;
   justify-content:center;
   text-align:center;
   margin-bottom: 10px;
 }
+.category-container {
+  display: flex;
+  flex-direction:column;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
 
-h1 {
+.h1-categories {
   font-size: 25px;
 }
 
@@ -19,7 +25,7 @@ h1 {
   justify-content:center;
 }
 
-.card {
+.category-card {
   color: white;
   height: 55px;
   width: 55px;

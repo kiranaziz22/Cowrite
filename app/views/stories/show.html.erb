@@ -8,16 +8,15 @@
 <p><%= @story.rich_content %></p>
 
 <% @story.collabs.each do |collab| %>
-<%= collab.user.first_name%> <%= collab.user.last_name%>
+  <%= collab.user.first_name%> <%= collab.user.last_name%>
   <li class="list-group-item"><%= collab.rich_content %>
   </li>
-  <% end %>
+<% end %>
 
+<p><%= link_to "Continue this Story", new_story_collab_path(@story) %></p>
 
-<p><a href="<%= stories_path %>">Continue this story</a></p>
-<p><a href="<%= stories_path %>">Stories index</a></p>
-<%= link_to "Continue a Story", new_story_collab_path(@story) %>
 <%= link_to "Delete",
   story_path(@story),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+<p><a href="<%= stories_path %>">Stories index</a></p>

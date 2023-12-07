@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
   def home
     @stories = Story.all
-    @user = User.find(current_user.id)
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
+    @categories = Category.all
   end
 end

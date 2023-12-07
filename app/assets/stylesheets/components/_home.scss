@@ -6,19 +6,19 @@
   background-size: cover;
 }
 
-.container {
+.home-container {
   margin: 15px;
   background-color: #F3F3F3;
 }
 
-.page-content {
+.home-page-content {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.cards {
+.stories-cards {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -64,4 +64,11 @@
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   text-decoration: none;
+}
+
+.categories-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  place-items: center;
 }

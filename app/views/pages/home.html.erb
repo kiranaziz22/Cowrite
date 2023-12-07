@@ -1,11 +1,11 @@
 <div class="home-banner">
     <h1>Welcome to CoWrite</h1>
 </div>
-<div class="container">
-  <div class="page-content">
+<div class="home-container">
+  <div class="home-page-content">
     <div class="top-stories">
       <h4>Top stories</h4>
-      <div class="cards">
+      <div class="stories-cards">
         <% @stories.each do |story| %>
           <a href="<%= story_path(story.id)%>" class="story-card">
             <h3><%= story.title %></h3>
@@ -16,16 +16,29 @@
       </div>
     </div>
     <div class="home-actions">
-      <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-        <h3>Profile here</h3>
-      </a>
-      <a href="<%= categories_path %>" class="categories-card" >
-        <h3>All categories</h3>
-        <p>Here would be the category card</p>
-      </a>
+      <% if user_signed_in? %>
+        <a href="<%= profile_path(@user.id) %>" class="profile-card" >
+          <h3>Profile here</h3>
+        </a>
+      <% else %>
+        <a href="#" class="profile-card" >
+          <h3>Connect !</h3>
+        </a>
+      <% end %>
+      <div class="categories-card" >
+        <a href="<%= categories_path %>"><h3>Genres</h3></a>
+        <div class="categories-cards">
+          <% @categories.each do |category| %>
+            <a href="<%= category_path(category.id) %>" class="category-card" >
+              <p><%= category.genre  %></p>
+            </a>
+          <% end %>
+        </div>
+      </div>
       <a href="<%= new_story_path %>" >
         <h3>Create a new story !</h3>
       </a>
+      <h3>What is CoWrite</h3>
     </div>
   </div>
 </div>

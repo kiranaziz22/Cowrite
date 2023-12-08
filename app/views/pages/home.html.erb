@@ -21,7 +21,9 @@
     <div class="home-actions">
       <% if user_signed_in? %>
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-          <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill %>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
+          <% end %>
           <h3><%= current_user.first_name %></h3>
         </a>
       <% else %>

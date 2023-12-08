@@ -1,5 +1,16 @@
 <h1>All stories</h1>
+  <div class="index-container">
+    <div class="index-card">
+      <% @stories.each do |story| %>
+        <a href="<%= story_path(story.id)%>" class="i">
+           <div class="card-info p-3">
+              <h3 class="font-weight-bold text-center h1"><%= story.title %></h3>
+               <div class="synopsis">
+                  <h5 class="font-weight-bold text-center h4"><%= story.synopsis %></h5>
+                </div>
+                  <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
+            </div>
+        </a>
+    <% end %>
+  </div>
 
-<% @stories.each do |story| %>
-  <p><a href="<%= story_path(story.id)%>"><%= story.title %></a></p>
-<% end %>

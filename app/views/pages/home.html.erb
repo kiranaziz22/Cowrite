@@ -21,7 +21,9 @@
     <div class="home-actions">
       <% if user_signed_in? %>
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-          <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill %>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
+          <% end %>
           <h3><%= current_user.first_name %></h3>
         </a>
       <% else %>
@@ -40,10 +42,11 @@
         </div>
       </div>
       <h3><a href="<%= new_story_path %>" class="create-button" >
-        Create a new story !
+        Add a new story !
       </a></h3>
       <div class="wic">
         <h3>What is CoWrite</h3>
+        <p>CoWrite is an online platform used to cure our writer’s block. CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
       </div>
     </div>
   </div>

@@ -1,79 +1,16 @@
 <h1>All stories</h1>
 
-<div class="index_card">
-    <% @stories.each do |story| %>
-      <a href="<%= story_path(story.id)%>" class="card-product">
-        <%= cl_image_tag story.photos.first.key, alt:"story image", class: "card-image" %>
-        <div class="card-info p-3">
-          <h1 class="font-weight-bold text-center"><%= story.title %></h1>
-            <h2 class="font-weight-bold text-center no-underline"><%= story.synopsis %></h2>
-        </div>
-      </a>
+  <div class="index-container">
+    <div class="index-card">
+      <% @stories.each do |story| %>
+        <a href="<%= story_path(story.id)%>" class="i">
+           <div class="card-info p-3">
+              <h3 class="font-weight-bold text-center h1"><%= story.title %></h3>
+               <div class="synopsis">
+                  <h5 class="font-weight-bold text-center h4"><%= story.synopsis %></h5>
+                </div>
+                  <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
+            </div>
+        </a>
     <% end %>
-
-<body>
-  <div class="wrapper">
-    <div class="container">
-      <h1 class="h1-categories">Categories</h1>
-      <div class="row">
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Fantasy
-          </div>
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Fanfic
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Romance
-          </div>
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Comedy
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Horror
-          </div>
-
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Adventure
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Thriller
-          </div>
-
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Historical
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Poetry
-          </div>
-
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Dystopian
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Sci-Fi
-          </div>
-
-          <div class="card" style="background-image: url(https://picsum.photos/200)">
-          Essay
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
-</body>

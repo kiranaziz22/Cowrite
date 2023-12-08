@@ -1,8 +1,15 @@
 <h1>All stories</h1>
 
-<% @stories.each do |story| %>
-  <p><a href="<%= story_path(story.id)%>"><%= story.title %></a></p>
-<% end %>
+<div class="index_card">
+    <% @stories.each do |story| %>
+      <a href="<%= story_path(story.id)%>" class="card-product">
+        <%= cl_image_tag story.photos.first.key, alt:"story image", class: "card-image" %>
+        <div class="card-info p-3">
+          <h1 class="font-weight-bold text-center"><%= story.title %></h1>
+            <h2 class="font-weight-bold text-center no-underline"><%= story.synopsis %></h2>
+        </div>
+      </a>
+    <% end %>
 
 <body>
   <div class="wrapper">

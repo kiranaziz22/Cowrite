@@ -1,0 +1,39 @@
+.index_card {
+  position: relative;
+  display:list-item;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  /* overflow: hidden; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-size: 400px;
+}
+
+.index_card .card_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease;
+}
+
+/* .card_product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease;
+} */
+
+.index_card .card_image:hover {
+  transform: scale(1.1);
+  color: adjust-hue($color: #f5e9e9, $degrees: 40);
+  text-decoration-line: none;
+}
+
+.index_card h2 {
+  text-decoration-line: none;
+  color: rgb(255, 136, 0);
+}

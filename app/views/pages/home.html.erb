@@ -7,11 +7,9 @@
       <h4>Top stories</h4>
       <div class="stories-cards">
         <% @stories.each do |story| %>
-          <a href="<%= story_path(story.id)%>" class="story-card">
-            <div>
-              <%= cl_image_tag story.photos.first.key, width:100, height:100, crop: :fill %>
-            </div>
-            <div>
+          <a href="<%= story_path(story.id)%>" class="story-card-hp">
+            <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
+            <div class="story-info-hp">
               <h3><%= story.title %></h3>
               <p><%= story.synopsis %></p>
             </div>
@@ -23,15 +21,16 @@
     <div class="home-actions">
       <% if user_signed_in? %>
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-          <h3>Profile here</h3>
+          <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill %>
+          <h3><%= current_user.first_name %></h3>
         </a>
       <% else %>
-        <a href="#" class="profile-card" >
+        <a href="<%= new_user_session_path %>" class="profile-card" >
           <h3>Connect !</h3>
         </a>
       <% end %>
       <div class="categories-card-hp" >
-        <a href="<%= categories_path %>" class="genres-txt"><h3>Genres</h3></a>
+        <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">
           <% @categories.each do |category| %>
             <a href="<%= category_path(category.id) %>" class="category-card-hp" >

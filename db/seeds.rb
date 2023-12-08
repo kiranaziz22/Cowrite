@@ -16,9 +16,13 @@ Category.destroy_all
 puts "Creating db..."
 
 user1 = User.create(first_name: "Jonny", last_name: "Dunseath", username: "Beatwrecka", email: "email@gmail.com", password: "123456", password_confirmation: "123456")
+user_1_photo = URI.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a23447e0-a930-463e-ba39-2e4724633a73/dfunc20-68105db0-1228-40ca-bd36-283868e4f3d3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyMzQ0N2UwLWE5MzAtNDYzZS1iYTM5LTJlNDcyNDYzM2E3M1wvZGZ1bmMyMC02ODEwNWRiMC0xMjI4LTQwY2EtYmQzNi0yODM4NjhlNGYzZDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._8A_EfwQhMcfmSRvDR5s7Lv6cE17RkZ3rbf523UIdUo")
+user1.photo.attach(io: user_1_photo, filename: "#{user1.username}.png", content_type: "image/png")
 user1.save
 
 category1 = Category.create(genre: "Horror")
+category_1_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category1.photo.attach(io: category_1_photo, filename: "#{category1.genre}.png", content_type: "image/png")
 category1.save
 
 category2 = Category.create(genre: "Thriller")
@@ -188,3 +192,5 @@ user_id: user1.id, category_id: category12.id)
 story_12_photo = URI.open("https://images.unsplash.com/photo-1443916568596-df5a58c445e9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGpveXxlbnwwfHwwfHx8MA%3D%3D")
 story12.photos.attach(io: story_12_photo, filename: "#{story12.title}.png", content_type: "image/png")
 story12.save
+
+puts "Done!"

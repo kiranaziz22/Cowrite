@@ -34,7 +34,7 @@
       <div class="categories-card-hp" >
         <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">
-          <% @categories.each do |category| %>
+          <% @categories.each do |category| %>r
             <a href="<%= category_path(category.id) %>" class="category-card-hp" >
               <%= category.genre  %>
             </a>

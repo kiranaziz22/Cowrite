@@ -12,6 +12,8 @@
 .home-container {
   margin: 15px;
   background-color: #F3F3F3;
+
+
 }
 
 .home-page-content {
@@ -19,6 +21,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
+
 }
 
 .stories-cards {
@@ -28,15 +31,16 @@
 
 }
 
-.story-card {
+.story-card-hp {
   width: 650px;
-  height: 130px;
+  height: 135px;
   padding: 10px;
   border: 2px solid #3A4D39;
   text-decoration: none;
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   display: flex;
+  overflow: hidden;
 }
 
 .home-actions {
@@ -50,18 +54,19 @@
   height: 170px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
   padding: 50px;
   margin-top: 36px;
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   text-decoration: none;
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+  justify-content: center;
 }
 
 .categories-card-hp {
   width: 650px;
-  height: 170px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,10 +78,10 @@
 }
 
 .categories-cards-hp {
-  width: 600px;
+  width: 550px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   place-items: center;
 }
 
@@ -88,8 +93,8 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
 }
 
 .genres-txt {
@@ -98,7 +103,7 @@
 
 .create-button {
   color: #FFFFFF;
-  background-color: #4F6F52;
+  background-color: #1B7566;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -110,4 +115,24 @@
 .wic {
   padding: 10px;
   background-color: #D9D9D9;
+  width: 650px;
+}
+
+.image-card-hp {
+  width: 110px;
+  height: 110px;
+  margin-right: 10px;
+}
+
+.story-info-hp {
+  display: -webkit-box;
+    max-width: 500px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  // width: 500px;
+  // display: inline-block;
+  // text-overflow: ellipsis;
+  // white-space: wrap;
+  // overflow: hidden;
 }

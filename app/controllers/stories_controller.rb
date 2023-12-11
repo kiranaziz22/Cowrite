@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+
   def index
     @stories = Story.all
     if params[:query].present?
@@ -9,6 +10,8 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @collab = Collab.new
+    @review = Review.new
     @stories = Story.all
   end
 
@@ -29,7 +32,9 @@ class StoriesController < ApplicationController
 
   def destroy
     @story = Story.find(params[:id])
+    if current_user == @story.user
     @story.destroy
+    end
     redirect_to stories_path, status: :see_other
   end
 

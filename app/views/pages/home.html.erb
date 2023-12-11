@@ -34,7 +34,7 @@
       <div class="categories-card-hp" >
         <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">
-          <% @categories.each do |category| %>
+          <% @categories.each do |category| %>r
             <a href="<%= category_path(category.id) %>" class="category-card-hp" >
               <%= category.genre  %>
             </a>
@@ -42,11 +42,11 @@
         </div>
       </div>
       <h3><a href="<%= new_story_path %>" class="create-button" >
-        Add a new story !
+        Add a new story!
       </a></h3>
       <div class="wic">
         <h3>What is CoWrite</h3>
-        <p>CoWrite is an online platform used to cure our writer’s block. CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
+        <p>CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
       </div>
     </div>
   </div>

@@ -1,16 +1,33 @@
-<h1>All stories</h1>
+ <%#  <%= <a href= stories_path(story.index) class="back">
+    <button>Back</button>
+  </a> %>
+  <%# <h1><%= link_to "All Stories", @story_path(Story.all) %><%# </h1> %>
+  <%# <h3><a href="<%= stories_path(Story.all) %><%# ">See all stories</a></h3> %>
+
 
   <div class="index-container">
-    <div class="index-card">
-      <% @stories.each do |story| %>
-        <a href="<%= story_path(story.id)%>" class="i">
-           <div class="card-info p-3">
-              <h3 class="font-weight-bold text-center h1"><%= story.title %></h3>
-               <div class="synopsis">
-                  <h5 class="font-weight-bold text-center h4"><%= story.synopsis %></h5>
+    <div class="all-container">
+      <div class="search-wrapper">
+        <%= form_with url: stories_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Discover a story..."
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+        </div>
+        <div class="index-card">
+          <% @stories.each do |story| %>
+              <div class="card-info p-3">
+                <a href="<%= story_path(story.id)%>" class="i">
+                  <h3 class="font-weight-bold text-center h3"><%= story.title %></h3>
+                    <div class="synopsis">
+                      <h5 class="font-weight-bold text-center h5"><%= story.synopsis %></h5>
+                    </div>
+                      <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
                 </div>
-                  <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
-            </div>
-        </a>
-    <% end %>
+            </a>
+        <% end %>
   </div>

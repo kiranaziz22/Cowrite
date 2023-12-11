@@ -1,6 +1,10 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query OR synopsis ILIKE :query"
+      @stories = @stories.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show

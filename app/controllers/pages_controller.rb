@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     end
     @categories = Category.all
   end
+
+  def index
+    @stories = Story.all
+  end
 end

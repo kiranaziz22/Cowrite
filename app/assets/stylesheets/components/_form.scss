@@ -1,0 +1,55 @@
+
+
+
+
+.test {
+  border-color: green;
+  border-style: double;
+  padding: 20px;
+  box-shadow: inset;
+  position: relative;
+  width: 350px;
+  height: 100px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+
+.label{
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: medium;
+  color: #37733e;
+  letter-spacing: 1px;
+}
+.btn {
+  color: white;
+  margin-top: 20px;
+  background: #37733e;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px
+}
+
+trix-editor {
+border-color: #37733e;
+border-style: double;
+padding: 20px;
+box-shadow: inset;
+position: relative;
+width: 700px;
+height: 300px;
+border-radius: 20px;
+padding: 40px;
+box-sizing: border-box;
+background: #ecf0f3;
+box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+trix-toolbar{
+  border-color: #37733e;
+}

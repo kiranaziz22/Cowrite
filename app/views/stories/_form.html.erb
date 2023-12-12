@@ -1,10 +1,16 @@
 
+<div class="container-form container">
+
+ <div class="text">
+      <h3 class="new">Add a new Story</h3>
+  </div>
    <%= simple_form_for story do |f| %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.input :title %>
-    <%= f.input :genre %>
-    <%= f.association :category %>
-    <%= f.input :synopsis %>
+    <%= f.input :photos, as: :file, input_html: { class: "picture",multiple: true },label_html: {class:"label"} %>
+    <%= f.input :title,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
+    <%= f.input :genre,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
+    <%= f.association :category,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
+    <%= f.input :synopsis,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
     <%= f.rich_text_area :rich_content %>
     <%= f.submit "Add a New Story", class: "btn btn-primary"%>
      <% end %>
+</div>

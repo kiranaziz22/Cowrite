@@ -12,8 +12,10 @@
                 <%= image_tag "blankprofile.png",style:"width: 150px; z-index: 1"%>
                 <% end %>
                 <% if @user == current_user %>
-              <%= link_to "Edit profile", edit_user_registration_path, class:"btn btn-primary"%>
-                <% end %>
+              <%= link_to edit_user_registration_path do %>
+             <i class="fa fa-edit" style="font-size:24px;color:white"></i>
+            <% end %>
+            <% end %>
             </div>
             <div class="ms-3" style="margin-top: 130px;">
               <h4><%= @user.first_name %> <%= @user.last_name %></h4>

@@ -1,53 +1,67 @@
-<div class="home-banner">
-    <h1>Welcome to CoWrite</h1>
-</div>
-<div class="home-container">
-  <div class="home-page-content">
-    <div class="top-stories">
-      <h4>Top stories</h4>
-      <div class="stories-cards">
-        <% @stories.each do |story| %>
-          <a href="<%= story_path(story.id)%>" class="story-card-hp">
-            <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
-            <div class="story-info-hp">
-              <h3><%= story.title %></h3>
-              <p><%= story.synopsis %></p>
-            </div>
-          </a>
-        <% end %>
-      <p><a href="<%= stories_path %>">See all stories</a></p>
+  <%# <div class="home-banner">
+    <div id="banner-image"></div><%= image_tag "banner_notepad.PNG" %>
+   <%#  </div><%= <h1>Welcome to CoWrite</h1> %>
+ <%#  </div> %>
+    <div class="home-banner">
+      <div class="banner-image"><% image_tag="banner_notepad.PNG" %>
+      <div class="banner-text">
+        <h1>Welcome to Co-Write</h1>
+        <p>The home of creative writing collaborations</p>
+        <button>Find your inspiration</button>
       </div>
     </div>
-    <div class="home-actions">
-      <% if user_signed_in? %>
-        <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
-          <% end %>
-          <h3><%= current_user.first_name %></h3>
-        </a>
-      <% else %>
-        <a href="<%= new_user_session_path %>" class="profile-card" >
-          <h3>Connect !</h3>
-        </a>
-      <% end %>
-      <div class="categories-card-hp" >
-        <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
-        <div class="categories-cards-hp">
-          <% @categories.each do |category| %>r
-            <a href="<%= category_path(category.id) %>" class="category-card-hp" >
-              <%= category.genre  %>
+
+
+
+
+  <div class="home-container">
+      <div class="home-page-content">
+        <div class="top-stories">
+          <h4>Top stories</h4>
+          <div class="stories-cards">
+            <% @stories.each do |story| %>
+              <a href="<%= story_path(story.id)%>" class="story-card-hp">
+                <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
+                <div class="story-info-hp">
+                  <h3><%= story.title %></h3>
+                  <p><%= story.synopsis %></p>
+                </div>
+              </a>
+            <% end %>
+          <p><a href="<%= stories_path %>">See all stories</a></p>
+          </div>
+        </div>
+        <div class="home-actions">
+          <% if user_signed_in? %>
+            <a href="<%= profile_path(@user.id) %>" class="profile-card" >
+            <% if @user.photo.attached? %>
+              <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
+              <% end %>
+              <h3><%= current_user.first_name %></h3>
+            </a>
+          <% else %>
+            <a href="<%= new_user_session_path %>" class="profile-card" >
+              <h3>Connect !</h3>
             </a>
           <% end %>
+          <div class="categories-card-hp" >
+            <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
+            <div class="categories-cards-hp">
+              <% @categories.each do |category| %>r
+                <a href="<%= category_path(category.id) %>" class="category-card-hp" >
+                  <%= category.genre  %>
+                </a>
+              <% end %>
+            </div>
+          </div>
+          <h3><a href="<%= new_story_path %>" class="create-button" >
+            Add a new story!
+          </a></h3>
+          <div class="wic">
+            <h3>What is CoWrite</h3>
+            <p>CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
+          </div>
         </div>
       </div>
-      <h3><a href="<%= new_story_path %>" class="create-button" >
-        Add a new story!
-      </a></h3>
-      <div class="wic">
-        <h3>What is CoWrite</h3>
-        <p>CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
-      </div>
     </div>
-  </div>
-</div>
+    </div>

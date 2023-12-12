@@ -1,19 +1,37 @@
 .home-banner {
   /* background-image: url("green_banner.webp"); */
-  background-image: url("/assets/images/banner_notepad.PNG");
-  padding: 70px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
+ /*  background-image: url("/assets/images/banner_notepad.PNG"); */
+  /* height: 10%; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+/*   text-align: center;
   color: #FFFFFF;
-  background-size: cover;
+  flex: content; */
+}
+
+.banner-image {
+ /* background-image: linear-gradient(rgba(201, 212, 192, 0.1), rgba(127, 236, 163, 0.079)), url("banner_notepad.PNG"); */
+ background-image: url("banner_notepad.PNG");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100%;
+ /* opacity: max($numbers: 0.8); */
+ /* position: relative; */
+  min-height: 400px;
+}
+
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
 }
 
 .home-container {
-  margin: 15px;
+  margin:30px;
   background-color: #F3F3F3;
-
-
 }
 
 .home-page-content {

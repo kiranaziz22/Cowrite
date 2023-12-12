@@ -59,6 +59,7 @@
   background-color: #FFFFFF;
   display: flex;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .home-actions {
@@ -105,7 +106,7 @@
 
 .category-card-hp {
   color: #FFFFFF;
-  background-color: #4F6F52;
+  background-color: #37733e;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -113,15 +114,18 @@
   padding: 5px;
   width: 85px;
   height: 85px;
+  font-weight: bold;
+  font-size: small;
 }
 
 .genres-txt {
   color: #000000;
+  text-decoration: none;
 }
 
 .create-button {
   color: #FFFFFF;
-  background-color: #1B7566;
+  background-color: #37733e;
   text-decoration: none;
   display: flex;
   justify-content: center;

@@ -1,11 +1,10 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.google.com/');
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 // Define fonts for body and headers
-$body-font: "Courier", "Mono", "serif";
-$headers-font: "Courier", "Prime", "serif";
-// $headers-font: "Cutive", "Mono";
+$body-font: "Courier", "prime";
+$headers-font: "Courier", "prime";
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

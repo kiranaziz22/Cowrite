@@ -2,8 +2,8 @@
   <div class="ssc-content">
     <div class="story-info-sp">
       <h6>Genre : <%= @story.genre %></h6>
-      <h6><%= @story.get_upvotes.size %> Upvotes</h6>
-      <h6><%= @story.get_downvotes.size %> Downvotes</h6>
+      <h6><%= @story.get_upvotes.size   %> Likes</h6>
+      <h6><%= @story.get_downvotes.size %> Dislikes</h6>
     </div>
     <h1><strong><%= @story.title %></strong></h1>
     <h6><%= @story.synopsis %></h6>
@@ -14,12 +14,12 @@
 
     <div class="likes-un">
       <%= button_to like_story_path(@story), method: :put do %>
-        Upvote
+      <i class="fa fa-thumbs-up" style="font-size20px;color:green"></i>
         <%= @story.get_upvotes.size %>
       <% end %>
 
       <%= button_to unlike_story_path(@story), method: :put do %>
-        Downvote
+        <i class="fa fa-thumbs-down" style="font-size20px;color:green"></i>
         <%= @story.get_downvotes.size %>
       <% end %>
     </div>
@@ -72,7 +72,7 @@
       story_path(@story),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
    <% end %>
-    <p><a href="<%= stories_path %>">Stories index</a></p>
+    <p><a class="btn btn-primary" href="<%= stories_path %>">Stories index</a></p>
     <br>
   </div>
 </div>

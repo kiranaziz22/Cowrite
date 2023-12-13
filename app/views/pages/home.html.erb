@@ -6,9 +6,23 @@
       <div class="banner-image"><% image_tag="banner_notepad.PNG" %>
       <div class="banner-text">
         <h1>Welcome to Co-Write</h1>
-        <p>The home of creative writing collaborations</p>
+        <%# <p>The home of creative writing collaborations</p> %>
+                <!-- Element to contain animated typing -->
+      <span id="element"></span>
+
+      <!-- Load library from the CDN -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['The home of creative writing collaborations'],
+          typeSpeed: 50,
+        });
+      </script>
+        </div>
         <button>Find your inspiration</button>
-      </div>
+
     </div>
 
 

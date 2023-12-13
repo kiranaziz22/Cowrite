@@ -7,7 +7,7 @@
    <%= simple_form_for story do |f| %>
     <%= f.input :photos, as: :file, input_html: { class: "picture",multiple: true },label_html: {class:"label"} %>
     <%= f.input :title,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
-    <%= f.input :genre,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
+    <%# <%= f.input :genre,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
     <%= f.association :category,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
     <%= f.input :synopsis,  input_html:{class: "addstory"}, label_html: {class:"label"} %>
     <%= f.rich_text_area :rich_content %>

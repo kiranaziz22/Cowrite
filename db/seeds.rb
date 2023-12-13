@@ -198,50 +198,50 @@ story_12_photo = URI.open("https://images.unsplash.com/photo-1443916568596-df5a5
 story12.photos.attach(io: story_12_photo, filename: "#{story12.title}.png", content_type: "image/png")
 story12.save
 
-story13 = Story.create(title: "Lara's Trip", genre: "Adventure",
-  content: "As the sun dipped below the horizon, casting long shadows over the dense, mysterious forest, Lara felt a surge of excitement
-  tinged with trepidation. Armed with an old map she had discovered in her grandfather's dusty attic, she ventured deeper into the heart of the ancient woods.
-  The air grew thick with an otherworldly energy, and the rustling leaves seemed to whisper secrets of forgotten times. As she followed the winding trail, a hidden entrance to a long-lost temple revealed itself, partially concealed by vines and moss.
-  With each step, the air became charged with anticipation, and Lara's heart quickened as she entered the dimly lit, echoing chambers of the forgotten sanctuary. Little did she know that her journey had just begun, and the ancient temple held mysteries that would test her courage and cunning.
-  Inside, she uncovered a series of cryptic symbols and enigmatic artifacts, each hinting at a deeper, more profound purpose. As she delved further into the temple's depths, Lara encountered puzzles that required both intellect and intuition to solve. The air hummed with an ancient power that seemed to guide her,
-  pushing her to the limits of her abilities. With each challenge conquered, the temple revealed more of its hidden wonders. Unraveling the secrets of the past, Lara felt a connection to a bygone era, and a responsibility to preserve the knowledge she uncovered. The adventure that began with a faded map now unfolded
-  into a quest for wisdom and discovery, forever changing Lara's perception of the world around her.",
-  synopsis: "The adventure story follows Lara, who embarks on a thrilling journey into a mysterious forest guided by an old map found in her grandfather's attic.
-  As she navigates deeper into the woods, Lara discovers a hidden entrance to an ancient temple. Inside, she encounters a series of cryptic symbols and puzzles that lead her to unveil the temple's forgotten secrets. Each challenge brings her closer to a profound connection with the past, as the temple reveals its ancient mysteries.
-  Throughout the quest, Lara's courage and intellect are put to the test, transforming her adventure from a mere exploration into a profound quest for knowledge and discovery. The story explores themes of curiosity, bravery, and the timeless allure of uncovering the mysteries of the past.",
-  user_id: user2.id, category_id: category13.id)
-  story_13_photo = URI.open("/Users/santana/Desktop/Lara_Croft_Tomb_Raider_01.jpeg")
-  story13.photos.attach(io: story_13_photo, filename: "#{story13.title}.png", content_type: "image/png")
-  story13.save
+# story13 = Story.create(title: "Lara's Trip", genre: "Adventure",
+#   content: "As the sun dipped below the horizon, casting long shadows over the dense, mysterious forest, Lara felt a surge of excitement
+#   tinged with trepidation. Armed with an old map she had discovered in her grandfather's dusty attic, she ventured deeper into the heart of the ancient woods.
+#   The air grew thick with an otherworldly energy, and the rustling leaves seemed to whisper secrets of forgotten times. As she followed the winding trail, a hidden entrance to a long-lost temple revealed itself, partially concealed by vines and moss.
+#   With each step, the air became charged with anticipation, and Lara's heart quickened as she entered the dimly lit, echoing chambers of the forgotten sanctuary. Little did she know that her journey had just begun, and the ancient temple held mysteries that would test her courage and cunning.
+#   Inside, she uncovered a series of cryptic symbols and enigmatic artifacts, each hinting at a deeper, more profound purpose. As she delved further into the temple's depths, Lara encountered puzzles that required both intellect and intuition to solve. The air hummed with an ancient power that seemed to guide her,
+#   pushing her to the limits of her abilities. With each challenge conquered, the temple revealed more of its hidden wonders. Unraveling the secrets of the past, Lara felt a connection to a bygone era, and a responsibility to preserve the knowledge she uncovered. The adventure that began with a faded map now unfolded
+#   into a quest for wisdom and discovery, forever changing Lara's perception of the world around her.",
+#   synopsis: "The adventure story follows Lara, who embarks on a thrilling journey into a mysterious forest guided by an old map found in her grandfather's attic.
+#   As she navigates deeper into the woods, Lara discovers a hidden entrance to an ancient temple. Inside, she encounters a series of cryptic symbols and puzzles that lead her to unveil the temple's forgotten secrets. Each challenge brings her closer to a profound connection with the past, as the temple reveals its ancient mysteries.
+#   Throughout the quest, Lara's courage and intellect are put to the test, transforming her adventure from a mere exploration into a profound quest for knowledge and discovery. The story explores themes of curiosity, bravery, and the timeless allure of uncovering the mysteries of the past.",
+#   user_id: user2.id, category_id: category13.id)
+#   story_13_photo = URI.open("/Users/santana/Desktop/Lara_Croft_Tomb_Raider_01.jpeg")
+#   story13.photos.attach(io: story_13_photo, filename: "#{story13.title}.png", content_type: "image/png")
+#   story13.save
 
-story14 = Story.create(title: "The Road Not Taken", genre: "Poetry",
-  content: "Two roads diverged in a yellow wood,
-  And sorry I could not travel both
-  And be one traveler, long I stood
-  And looked down one as far as I could
-  To where it bent in the undergrowth;
+# story14 = Story.create(title: "The Road Not Taken", genre: "Poetry",
+#   content: "Two roads diverged in a yellow wood,
+#   And sorry I could not travel both
+#   And be one traveler, long I stood
+#   And looked down one as far as I could
+#   To where it bent in the undergrowth;
 
-  Then took the other, as just as fair,
-  And having perhaps the better claim,
-  Because it was grassy and wanted wear;
-  Though as for that the passing there
-  Had worn them really about the same,
+#   Then took the other, as just as fair,
+#   And having perhaps the better claim,
+#   Because it was grassy and wanted wear;
+#   Though as for that the passing there
+#   Had worn them really about the same,
 
-  And both that morning equally lay
-  In leaves no step had trodden black.
-  Oh, I kept the first for another day!
-  Yet knowing how way leads on to way,
-  I doubted if I should ever come back.
+#   And both that morning equally lay
+#   In leaves no step had trodden black.
+#   Oh, I kept the first for another day!
+#   Yet knowing how way leads on to way,
+#   I doubted if I should ever come back.
 
-  I shall be telling this with a sigh
-  Somewhere ages and ages hence:
-  Two roads diverged in a wood, and I—
-  I took the one less traveled by,
-  And that has made all the difference.",
-  synopsis: "A short poem by Robert Frost.",
-  user_id: user2.id, category_id: category14.id)
-  story_14_photo = URI.open("/Users/santana/Desktop/Robert_Frost_NYWTS_2.jpeg")
-  story14.photos.attach(io: story_14_photo, filename: "#{story14.title}.png", content_type: "image/png")
-  story14.save
+#   I shall be telling this with a sigh
+#   Somewhere ages and ages hence:
+#   Two roads diverged in a wood, and I—
+#   I took the one less traveled by,
+#   And that has made all the difference.",
+#   synopsis: "A short poem by Robert Frost.",
+#   user_id: user2.id, category_id: category14.id)
+#   story_14_photo = URI.open("/Users/santana/Desktop/Robert_Frost_NYWTS_2.jpeg")
+#   story14.photos.attach(io: story_14_photo, filename: "#{story14.title}.png", content_type: "image/png")
+#   story14.save
 
 puts "Done!"

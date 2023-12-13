@@ -1,7 +1,7 @@
 <div class="banner" style="banner_notepad.PNG">
-  <div class="container">
+  <div class="banner-text">
     <h1>Welcome to  <strong>Co-Write</strong></h1>
-    <p>The home of creative writing collaborations</p>
+      <p>The home of creative writing collaborations</p>
              <!-- Element to contain animated typing -->
       <span id="element"></span>
 
@@ -11,31 +11,26 @@
       <!-- Setup and start animation! -->
       <script>
         var typed = new Typed('#element', {
-          strings: ['The home of creative writing collaborations'],
-          typeSpeed: 50,
+          strings: ['Pick a story', 'Have a read', 'Write a chapter', 'Collaborate with others', 'Find your inspiration'],
+          typeSpeed: 30,
+          loop: true,
         });
       </script>
-        </div>
-    <button>Find your inspiration</button>
+
   </div>
 </div>
+
+  <div class="search-wrapper">
+        <%= form_with url: stories_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Discover a story..."
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+  <% end %>
+  </div>
 <div class="home-container">
-  <div class="home-page-content">
-    <div class="top-stories">
-      <h4>Top stories</h4>
-      <div class="stories-cards">
-        <% @stories.each do |story| %>
-          <a href="<%= story_path(story.id)%>" class="story-card-hp">
-            <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
-            <div class="story-info-hp">
-              <h3><%= story.title %></h3>
-              <p><%= story.synopsis %></p>
-            </div>
-          </a>
-        <% end %>
-      <p><a href="<%= stories_path %>">See all stories</a></p>
-      </div>
-    </div>
 
 
 
@@ -73,7 +68,7 @@
           <div class="categories-card-hp" >
             <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
             <div class="categories-cards-hp">
-              <% @categories.each do |category| %>r
+              <% @categories.each do |category| %>
                 <a href="<%= category_path(category.id) %>" class="category-card-hp" >
                   <%= category.genre  %>
                 </a>

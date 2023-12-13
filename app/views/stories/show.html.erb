@@ -14,12 +14,12 @@
 
     <div class="likes-un">
       <%= button_to like_story_path(@story), method: :put do %>
-      <i class="fa fa-thumbs-up" style="font-size20px;color:green"></i>
+      <i class="fa fa-thumbs-up" style="font-size20px;color:black"></i>
         <%= @story.get_upvotes.size %>
       <% end %>
 
       <%= button_to unlike_story_path(@story), method: :put do %>
-        <i class="fa fa-thumbs-down" style="font-size20px;color:green"></i>
+        <i class="fa fa-thumbs-down" style="font-size20px;color:black"></i>
         <%= @story.get_downvotes.size %>
       <% end %>
     </div>
@@ -28,7 +28,7 @@
     <p><%= @story.rich_content %></p>
 
     <% @story.collabs.each do |collab| %>
-    <h5> By: <%= link_to "#{collab.user.first_name} #{collab.user.last_name}" , profile_path(collab.user)  %></h5>
+    <h5> Collab By: <%= link_to "#{collab.user.first_name} #{collab.user.last_name}" , profile_path(collab.user)  %></h5>
       <li class="list-group-item"><%= collab.rich_content %>
       </li>
       <% end %>

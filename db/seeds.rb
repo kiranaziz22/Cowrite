@@ -20,6 +20,11 @@ user_1_photo = URI.open("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com
 user1.photo.attach(io: user_1_photo, filename: "#{user1.username}.png", content_type: "image/png")
 user1.save
 
+user2 = User.create(first_name: "Tana", last_name: "Uhl", username: "Tanaiscoding", email: "tana14@gmail.com", password: "Hithere!", password_confirmation: "Hithere!")
+user_2_photo = URI.open("/Users/santana/Desktop/IMG_1315.jpeg")
+user2.photo.attach(io: user_2_photo, filename: "#{user2.username}.png", content_type: "image/png")
+user2.save
+
 category1 = Category.create(genre: "Horror")
 category_1_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 category1.photo.attach(io: category_1_photo, filename: "#{category1.genre}.png", content_type: "image/png")
@@ -117,7 +122,7 @@ Whispering Shadows of Eldoria unfolded as a rich fantasy, where the city's archi
 The city's towering spires became a battleground for sorcery, and its enchanted marketplaces concealed portals to mystical realms. In a race against time, Alara and Garret uncovered a plot orchestrated by a malevolent sorcerer seeking to harness the city's latent magical energies.
 As ancient prophecies intertwined with contemporary struggles, the characters faced mythical creatures, enchanted artifacts, and the dark allure of forbidden spells. Whispering Shadows of Eldoria wove a mesmerizing tapestry of fantasy, where the line between reality and magic blurred, and the fate of the city hinged on the courage and cunning of its unlikely heroes.",
 synopsis: "City of Synthesis is a captivating sci-fi exploration of a futuristic metropolis, blending advanced technology with the intricate stories of its inhabitants. In a world where artificial intelligence governs the city's functions and cybernetic enhancements are the norm, the novel follows the intertwined lives of characters navigating the complex interplay between humanity and technology. As the city's AI evolves, individuals like Zara, a cybernetic engineer seeking to bridge the gap between man and machine, and Eli, a rogue hacker with a mysterious past, find themselves caught in a web of conspiracies that threaten the delicate balance between organic and synthetic life.",
-user_id: user1.id, category_id: category5.id)
+user_id: user2.id, category_id: category5.id)
 story_5_photo = URI.open("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFudGFzeXxlbnwwfHwwfHx8MA%3D%3D")
 story5.photos.attach(io: story_5_photo, filename: "#{story5.title}.png", content_type: "image/png")
 story5.save
@@ -192,5 +197,51 @@ user_id: user1.id, category_id: category12.id)
 story_12_photo = URI.open("https://images.unsplash.com/photo-1443916568596-df5a58c445e9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGpveXxlbnwwfHwwfHx8MA%3D%3D")
 story12.photos.attach(io: story_12_photo, filename: "#{story12.title}.png", content_type: "image/png")
 story12.save
+
+story13 = Story.create(title: "Lara's Trip", genre: "Adventure",
+  content: "As the sun dipped below the horizon, casting long shadows over the dense, mysterious forest, Lara felt a surge of excitement
+  tinged with trepidation. Armed with an old map she had discovered in her grandfather's dusty attic, she ventured deeper into the heart of the ancient woods.
+  The air grew thick with an otherworldly energy, and the rustling leaves seemed to whisper secrets of forgotten times. As she followed the winding trail, a hidden entrance to a long-lost temple revealed itself, partially concealed by vines and moss.
+  With each step, the air became charged with anticipation, and Lara's heart quickened as she entered the dimly lit, echoing chambers of the forgotten sanctuary. Little did she know that her journey had just begun, and the ancient temple held mysteries that would test her courage and cunning.
+  Inside, she uncovered a series of cryptic symbols and enigmatic artifacts, each hinting at a deeper, more profound purpose. As she delved further into the temple's depths, Lara encountered puzzles that required both intellect and intuition to solve. The air hummed with an ancient power that seemed to guide her,
+  pushing her to the limits of her abilities. With each challenge conquered, the temple revealed more of its hidden wonders. Unraveling the secrets of the past, Lara felt a connection to a bygone era, and a responsibility to preserve the knowledge she uncovered. The adventure that began with a faded map now unfolded
+  into a quest for wisdom and discovery, forever changing Lara's perception of the world around her.",
+  synopsis: "The adventure story follows Lara, who embarks on a thrilling journey into a mysterious forest guided by an old map found in her grandfather's attic.
+  As she navigates deeper into the woods, Lara discovers a hidden entrance to an ancient temple. Inside, she encounters a series of cryptic symbols and puzzles that lead her to unveil the temple's forgotten secrets. Each challenge brings her closer to a profound connection with the past, as the temple reveals its ancient mysteries.
+  Throughout the quest, Lara's courage and intellect are put to the test, transforming her adventure from a mere exploration into a profound quest for knowledge and discovery. The story explores themes of curiosity, bravery, and the timeless allure of uncovering the mysteries of the past.",
+  user_id: user2.id, category_id: category13.id)
+  story_13_photo = URI.open("/Users/santana/Desktop/Lara_Croft_Tomb_Raider_01.jpeg")
+  story13.photos.attach(io: story_13_photo, filename: "#{story13.title}.png", content_type: "image/png")
+  story13.save
+
+story14 = Story.create(title: "The Road Not Taken", genre: "Poetry",
+  content: "Two roads diverged in a yellow wood,
+  And sorry I could not travel both
+  And be one traveler, long I stood
+  And looked down one as far as I could
+  To where it bent in the undergrowth;
+
+  Then took the other, as just as fair,
+  And having perhaps the better claim,
+  Because it was grassy and wanted wear;
+  Though as for that the passing there
+  Had worn them really about the same,
+
+  And both that morning equally lay
+  In leaves no step had trodden black.
+  Oh, I kept the first for another day!
+  Yet knowing how way leads on to way,
+  I doubted if I should ever come back.
+
+  I shall be telling this with a sigh
+  Somewhere ages and ages hence:
+  Two roads diverged in a wood, and I—
+  I took the one less traveled by,
+  And that has made all the difference.",
+  synopsis: "A short poem by Robert Frost.",
+  user_id: user2.id, category_id: category14.id)
+  story_14_photo = URI.open("/Users/santana/Desktop/Robert_Frost_NYWTS_2.jpeg")
+  story14.photos.attach(io: story_14_photo, filename: "#{story14.title}.png", content_type: "image/png")
+  story14.save
 
 puts "Done!"

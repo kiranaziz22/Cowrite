@@ -1,13 +1,8 @@
-  <%# <div class="home-banner">
-    <div id="banner-image"></div><%= image_tag "banner_notepad.PNG" %>
-   <%#  </div><%= <h1>Welcome to CoWrite</h1> %>
- <%#  </div> %>
-    <div class="home-banner">
-      <div class="banner-image"><% image_tag="banner_notepad.PNG" %>
-      <div class="banner-text">
-        <h1>Welcome to Co-Write</h1>
-        <%# <p>The home of creative writing collaborations</p> %>
-                <!-- Element to contain animated typing -->
+<div class="banner" style="banner_notepad.PNG">
+  <div class="container">
+    <h1>Welcome to  <strong>Co-Write</strong></h1>
+    <p>The home of creative writing collaborations</p>
+             <!-- Element to contain animated typing -->
       <span id="element"></span>
 
       <!-- Load library from the CDN -->
@@ -21,8 +16,25 @@
         });
       </script>
         </div>
-        <button>Find your inspiration</button>
-
+    <button>Find your inspiration</button>
+  </div>
+</div>
+<div class="home-container">
+  <div class="home-page-content">
+    <div class="top-stories">
+      <h4>Top stories</h4>
+      <div class="stories-cards">
+        <% @stories.each do |story| %>
+          <a href="<%= story_path(story.id)%>" class="story-card-hp">
+            <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
+            <div class="story-info-hp">
+              <h3><%= story.title %></h3>
+              <p><%= story.synopsis %></p>
+            </div>
+          </a>
+        <% end %>
+      <p><a href="<%= stories_path %>">See all stories</a></p>
+      </div>
     </div>
 
 

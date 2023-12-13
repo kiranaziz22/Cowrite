@@ -26,36 +26,58 @@ category1.photo.attach(io: category_1_photo, filename: "#{category1.genre}.png",
 category1.save
 
 category2 = Category.create(genre: "Thriller")
+category_2_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category2.photo.attach(io: category_2_photo, filename: "#{category2.genre}.png", content_type: "image/png")
 category2.save
 
 category3 = Category.create(genre: "Fiction")
+category_3_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category3.photo.attach(io: category_3_photo, filename: "#{category3.genre}.png", content_type: "image/png")
 category3.save
 
 category4 = Category.create(genre: "Sci-Fi")
+category_4_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category4.photo.attach(io: category_4_photo, filename: "#{category4.genre}.png", content_type: "image/png")
 category4.save
 
 category5 = Category.create(genre: "Fantasy")
+category_5_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category5.photo.attach(io: category_5_photo, filename: "#{category5.genre}.png", content_type: "image/png")
 category5.save
 
 category6 = Category.create(genre: "Romance")
+category_6_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category6.photo.attach(io: category_6_photo, filename: "#{category6.genre}.png", content_type: "image/png")
 category6.save
 
 category7 = Category.create(genre: "Comedy")
+category_7_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category7.photo.attach(io: category_7_photo, filename: "#{category7.genre}.png", content_type: "image/png")
 category7.save
 
 category8 = Category.create(genre: "Adventure")
+category_8_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category8.photo.attach(io: category_8_photo, filename: "#{category8.genre}.png", content_type: "image/png")
 category8.save
 
 category9 = Category.create(genre: "Dystopian")
+category_9_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category9.photo.attach(io: category_9_photo, filename: "#{category9.genre}.png", content_type: "image/png")
 category9.save
 
 category10 = Category.create(genre: "Historical")
+category_10_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category10.photo.attach(io: category_10_photo, filename: "#{category10.genre}.png", content_type: "image/png")
 category10.save
 
 category11 = Category.create(genre: "Essay")
+category_11_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category11.photo.attach(io: category_11_photo, filename: "#{category11.genre}.png", content_type: "image/png")
 category11.save
 
 category12 = Category.create(genre: "Poetry")
+category_12_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category12.photo.attach(io: category_12_photo, filename: "#{category12.genre}.png", content_type: "image/png")
 category12.save
 
 story1 = Story.create(title: "Ephemeral Shadows", genre: "Horror",

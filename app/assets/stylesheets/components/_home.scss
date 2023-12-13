@@ -1,29 +1,3 @@
-.home-banner {
-  /* background-image: url("green_banner.webp"); */
- /*  background-image: url("/assets/images/banner_notepad.PNG"); */
-  /* height: 10%; */
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.banner-image {
- /* background-image: linear-gradient(rgba(201, 212, 192, 0.1), rgba(127, 236, 163, 0.079)), url("banner_notepad.PNG"); */
- background-image: url("banner_notepad.PNG");
- background-position: center;
- background-repeat: no-repeat;
- background-size: 95%;
- opacity: max($numbers: 0.8);
- min-height: 500px;
-}
-
-.banner-text {
-  text-align: center;
-  position: absolute;
-  top: 15%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
-}
 
 .home-container {
   margin:10px;
@@ -52,6 +26,14 @@
   outline-width: 4px;
   padding-top: 20px;
   padding-left: 200px;
+  margin-left: 20%;
+}
+
+.btn-search{
+  margin-left: 10px;
+  background-color: #000000;
+  color: white;
+  border-radius: 50px;
 }
 
  .form-control:focus {

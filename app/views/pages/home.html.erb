@@ -9,7 +9,7 @@
       <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
       <!-- Setup and start animation! -->
-      <script>
+      <script class="typewriter">
         var typed = new Typed('#element', {
           strings: ['Pick a story', 'Have a read', 'Write a chapter', 'Collaborate with others', 'Find your inspiration'],
           typeSpeed: 30,
@@ -27,7 +27,7 @@
               class: "form-control",
               placeholder: "Discover a story..."
           %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <%= submit_tag "Search", name: "", class: "btn-search" %>
   <% end %>
   </div>
 <div class="home-container">
@@ -58,7 +58,7 @@
           <h3>Welcome! to CoWrite</h3>
           <h3><%= current_user.first_name %></h3>
         </a>
-        <h1>
+
       <% else %>
         <a href="<%= new_user_session_path %>" class="profile-card" >
           <h3>Connect !</h3>
@@ -70,65 +70,17 @@
           <% @categories.each do |category| %>
             <a href="<%= category_path(category.id) %>" class="category-card-hp" >
               <%= category.genre  %>
-
-
-
-
-  <div class="home-container">
-      <div class="home-page-content">
-        <div class="top-stories">
-          <h4>Top stories</h4>
-          <div class="stories-cards">
-            <% @stories.each do |story| %>
-              <a href="<%= story_path(story.id)%>" class="story-card-hp">
-                <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
-                <div class="story-info-hp">
-                  <h3><%= story.title %></h3>
-                  <p><%= story.synopsis %></p>
-                </div>
-              </a>
-            <% end %>
-          <p><a href="<%= stories_path %>">See all stories</a></p>
-          </div>
-        </div>
-        <div class="home-actions">
-          <% if user_signed_in? %>
-            <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-            <% if @user.photo.attached? %>
-              <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
-              <% end %>
-              <h3><%= current_user.first_name %></h3>
-            </a>
-          <% else %>
-            <a href="<%= new_user_session_path %>" class="profile-card" >
-              <h3>Connect !</h3>
             </a>
           <% end %>
-          <div class="categories-card-hp" >
-            <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
-            <div class="categories-cards-hp">
-              <% @categories.each do |category| %>
-                <a href="<%= category_path(category.id) %>" class="category-card-hp" >
-                  <%= category.genre  %>
-                </a>
-              <% end %>
-            </div>
-          </div>
-          <h3><a href="<%= new_story_path %>" class="create-button" >
-            Add a new story!
-          </a></h3>
-          <div class="wic">
-            <h3>What is CoWrite</h3>
-            <p>CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
-          </div>
         </div>
       </div>
+      <h3><a href="<%= new_story_path %>" class="create-button" >
+        Add a new story!
+      </a></h3>
+      <div class="wic">
+        <h3>What is CoWrite</h3>
+        <p>CoWrite allows you to create, edit, like, and collaborate onto stories of your choosing, to help inspire and hopefully cure your writer’s block, getting your creative juices flowing.</p>
+      </div>
     </div>
-<<<<<<< HEAD
   </div>
-
-
 </div>
-=======
-    </div>
->>>>>>> master

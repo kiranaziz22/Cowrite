@@ -19,17 +19,21 @@
             </div>
           </a>
         <% end %>
-      <p><a href="<%= stories_path %>">See all stories</a></p>
+      <p><a href="<%= stories_path %>"class="create-button">See all stories </a></p>
       </div>
     </div>
     <div class="home-actions">
+
       <% if user_signed_in? %>
+
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
         <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
           <% end %>
+          <h3>Welcome! to CoWrite</h3>
           <h3><%= current_user.first_name %></h3>
         </a>
+        <h1>
       <% else %>
         <a href="<%= new_user_session_path %>" class="profile-card" >
           <h3>Connect !</h3>
@@ -55,4 +59,6 @@ We are here to inspire, bring together a community, and get those creative juice
       </div>
     </div>
   </div>
+
+
 </div>

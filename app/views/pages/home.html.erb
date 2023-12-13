@@ -49,17 +49,14 @@
       </div>
     </div>
     <div class="home-actions">
-
       <% if user_signed_in? %>
-
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
-          <% end %>
-          <h3>Welcome! to CoWrite</h3>
-          <h3><%= current_user.first_name %></h3>
+          <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill %>
+            <% end %>
+            <h3>Welcome! to CoWrite</h3>
+            <h3><%= current_user.first_name %></h3>
         </a>
-
       <% else %>
         <a href="<%= new_user_session_path %>" class="profile-card" >
           <h3>Connect !</h3>
@@ -69,7 +66,7 @@
         <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">
           <% @categories.each do |category| %>
-            <a href="<%= category_path(category.id) %>" class="category-card-hp" >
+              <a href="<%= category_path(category.id) %>" class="category-card-hp" style="background-image: url('<%= cl_image_path(category.photo.key) %>');" >
               <%= category.genre  %>
             </a>
           <% end %>

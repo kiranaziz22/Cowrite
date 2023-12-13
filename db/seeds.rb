@@ -80,7 +80,7 @@ story_1_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f69
 story1.photos.attach(io: story_1_photo, filename: "#{story1.title}.png", content_type: "image/png")
 story1.save
 
-story2 = Story.create(title: "Whispers in the Concrete Jungle", genre: "Thriller",
+story2 = Story.create(title: "Whispers in the Jungle", genre: "Thriller",
 content: "In the pulsating heart of Nightshade City, Detective Rachel Turner stumbled upon a web of corruption reaching the highest echelons of power. A cryptic message left at crime scenes hinted at a clandestine organization orchestrating the city's chaos. As Rachel delved deeper, she found herself entangled with Ethan, a former intelligence operative haunted by his own demons.
 Whispers in the Concrete Jungle weaved a tale of deception and suspense as Rachel and Ethan raced against time to unravel the conspiracy. The city's skyline, once a symbol of aspiration, became a foreboding backdrop to their perilous pursuit of truth. As the mysterious organization tightened its grip, the duo faced unexpected allies and enemies within the city's intricate social fabric.
 In the gripping climax, Rachel and Ethan discovered the shocking truth—a nefarious plot to manipulate the city for unfathomable gains. The metropolis, it seemed, was a pawn in a larger game of power and control. Whispers in the Concrete Jungle unfolded as a relentless thriller, where the city's every corner concealed a revelation, and the line between ally and adversary blurred in the relentless pursuit of justice.",

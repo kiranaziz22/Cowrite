@@ -35,6 +35,7 @@
     <div class="top-stories">
       <h4>Top stories</h4>
       <div class="stories-cards">
+
         <% @stories.each do |story| %>
           <a href="<%= story_path(story.id)%>" class="story-card-hp">
             <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>

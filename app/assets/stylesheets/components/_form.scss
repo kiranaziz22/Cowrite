@@ -3,7 +3,7 @@
 
 
 .test {
-  border-color: green;
+  border-color: rgb(0, 0, 0);
   border-style: double;
   padding: 20px;
   box-shadow: inset;
@@ -28,7 +28,7 @@
 .btn {
   color: white;
   margin-top: 20px;
-  background: #37733e;
+  background: #000000;
   height: 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -43,12 +43,13 @@ padding: 20px;
 box-shadow: inset;
 position: relative;
 width: 1200px;
-height: 300px;
+min-height: 300px;
+height:auto;
 border-radius: 20px;
 padding: 40px;
 box-sizing: border-box;
 background: #ecf0f3;
-box-shadow: 10px 10px 10px #4b8a4f;
+box-shadow: 10px 10px 10px #1b1d1b;
 }
 trix-toolbar{
   border-color: #000000;

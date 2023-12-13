@@ -21,7 +21,7 @@ user1.photo.attach(io: user_1_photo, filename: "#{user1.username}.png", content_
 user1.save
 
 user2 = User.create(first_name: "Tana", last_name: "Uhl", username: "Tanaiscoding", email: "tana14@gmail.com", password: "Hithere!", password_confirmation: "Hithere!")
-user_2_photo = URI.open("/Users/santana/Desktop/IMG_1315.jpeg")
+user_2_photo = URI.open("https://avatars.githubusercontent.com/u/98760551?v=4")
 user2.photo.attach(io: user_2_photo, filename: "#{user2.username}.png", content_type: "image/png")
 user2.save
 

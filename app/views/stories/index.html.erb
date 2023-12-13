@@ -18,10 +18,11 @@
               <div class="card-info p-3">
                 <a href="<%= story_path(story.id)%>" class="i">
                   <h3 class="font-weight-bold text-center h3"><%= story.title %></h3>
+                      <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
                     <div class="synopsis">
                       <h5 class="font-weight-bold text-center h5"><%= story.synopsis %></h5>
                     </div>
-                      <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
+
                 </div>
             </a>
         <% end %>

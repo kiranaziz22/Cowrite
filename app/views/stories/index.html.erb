@@ -1,5 +1,29 @@
-<h1>All stories</h1>
 
-<% @stories.each do |story| %>
-  <p><a href="<%= story_path(story.id)%>"><%= story.title %></a></p>
-<% end %>
+<h1>All stories</h1>
+  <div class="index-container">
+    <div class="all-container">
+      <div class="search-wrapper">
+        <%= form_with url: stories_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Discover a story..."
+          %>
+        <%= submit_tag "Search", name: "", class: "btn-search" %>
+       <% end %>
+      </div>
+        </div>
+        <div class="index-card">
+          <% @stories.each do |story| %>
+              <div class="card-info p-3">
+                <a href="<%= story_path(story.id)%>" class="i">
+                  <h3 class="font-weight-bold text-center h3"><%= story.title %></h3>
+                      <%= cl_image_tag story.photos.first.key, alt:"story image", class: "index-card-image" %>
+                    <div class="synopsis">
+                      <h5 class="font-weight-bold text-center h5"><%= story.synopsis %></h5>
+                    </div>
+
+                </div>
+            </a>
+        <% end %>
+  </div>

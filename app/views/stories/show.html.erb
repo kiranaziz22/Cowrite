@@ -2,8 +2,8 @@
   <div class="ssc-content">
     <div class="story-info-sp">
       <h6>Genre : <%= @story.genre %></h6>
-      <h6><%= @story.get_upvotes.size %> Upvotes</h6>
-      <h6><%= @story.get_downvotes.size %> Downvotes</h6>
+      <h6><%= @story.get_upvotes.size   %> Likes</h6>
+      <h6><%= @story.get_downvotes.size %> Dislikes</h6>
     </div>
     <h1><strong><%= @story.title %></strong></h1>
     <h6><%= @story.synopsis %></h6>
@@ -14,12 +14,12 @@
 
     <div class="likes-un">
       <%= button_to like_story_path(@story), method: :put do %>
-        Upvote
+      <i class="fa fa-thumbs-up" style="font-size20px;color:green"></i>
         <%= @story.get_upvotes.size %>
       <% end %>
 
       <%= button_to unlike_story_path(@story), method: :put do %>
-        Downvote
+        <i class="fa fa-thumbs-down" style="font-size20px;color:green"></i>
         <%= @story.get_downvotes.size %>
       <% end %>
     </div>
@@ -31,23 +31,48 @@
     <h5> By: <%= link_to "#{collab.user.first_name} #{collab.user.last_name}" , profile_path(collab.user)  %></h5>
       <li class="list-group-item"><%= collab.rich_content %>
       </li>
-    <% end %>
+      <% end %>
+    <div data-controller ="toggle">
+      <button class="btn btn-primary mt-4" data-action="click-> toggle#fire">Continue this Story</button>
 
-    <h3><a href="<%=  new_story_collab_path(@story) %>" class="create-button" >
-        Continue this story !
-      </a></h3>
+       <div class="mt-3 d-none"data-toggle-target="toggleableElement">
+            <%= simple_form_for [@story,@collab] do |f| %>
+            <%= f.rich_text_area :rich_content,  wrapper_html:{class: "test"}%>
+            <%= f.submit "Add a Collab", class: "btn btn-primary"%>
+              <% end %>
+        </div>
+   </div>
 
-    <p><%= link_to "Add a Review", new_story_review_path(@story) %></p>
+  <div class="form-container" data-controller ="toggle">
+      <button class="btn btn-primary mt-4" data-action="click-> toggle#fire">Add a Review</button>
+     <div class="mt-3 d-none"data-toggle-target="toggleableElement">
+          <%= simple_form_for [@story, @review] do |f| %>
+            <%= f.input :comment, input_html:{class: "test"}, label_html: {class:"label"}%>
+            <%= f.submit "Submit review", class: "btn btn-primary" %>
+           <% end %>
+      </div>
+  </div>
+
+  <div class="review">
     <ul class="list-group">
       <% @story.reviews.each do |review| %>
-        <li class="list-group-item"><%= review.comment %> By: <%= review.user.first_name%> <%= review.user.last_name%></li>
+      <h5> By: <%= link_to "#{review.user.first_name} #{review.user.last_name}" , profile_path(review.user)  %></h5>
+        <li class="list-group-item"><%= review.comment %> </li>
       <% end %>
     </ul>
+  </div>
+
+
+
+
+
+
+   <% if @story.user == current_user %>
     <%= link_to "Delete",
       story_path(@story),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %>
-    <p><a href="<%= stories_path %>">Stories index</a></p>
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+   <% end %>
+    <p><a class="btn btn-primary" href="<%= stories_path %>">Stories index</a></p>
     <br>
   </div>
 </div>

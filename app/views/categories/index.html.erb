@@ -2,11 +2,9 @@
 <h1>All genres</h1>
 <div class="category-card-container">
 <% @categories.each do |category| %>
-  <%= link_to category_path(category.id) do %>
-    <div class="category-card" style="background-image: url(https://picsum.photos/200)">
-            <%= category.genre %>
-    </div>
-  <% end %>
+            <a href="<%= category_path(category.id) %>" class="category-card" >
+              <%= category.genre  %>
+            </a>
 <% end %>
 </div>
 </div>

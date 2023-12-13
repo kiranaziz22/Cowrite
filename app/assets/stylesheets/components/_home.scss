@@ -1,23 +1,56 @@
-.home-banner {
-  background-image: url("green_banner.webp");
-  padding: 70px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
-  color: #FFFFFF;
-  background-size: cover;
-}
 
 .home-container {
-  margin: 15px;
+  margin:10px;
   background-color: #F3F3F3;
 }
 
 .home-page-content {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 30px;
+
+}
+
+.search-wrapper {
+  position: relative;
+  align-self: flex-start;
+  flex-direction: column;
+  display:flex;
+  justify-content: center;
+  width: 600px;
+  min-width: 200px;
+  /* max-width: 600px; */
+  border-radius: none;
+  outline-color: #000;
+  outline-width: 4px;
+  padding-top: 20px;
+  padding-left: 200px;
+  margin-left: 20%;
+}
+
+.btn-search{
+  margin-left: 10px;
+  background-color: #000000;
+  color: white;
+  border-radius: 50px;
+}
+
+ .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(173, 165, 161, 0.25);
+  border-color: $cloud;
+}
+
+
+.form-control {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20;
+  background-color:$carrara;
+  outline-color: $cloud;
+  box-shadow: 0 0 5px rgba(195, 194, 194, 0.2);
 }
 
 @media(max-width: 992px) {
@@ -42,12 +75,13 @@
   width: 100%;
   height: 135px;
   padding: 10px;
-  border: 2px solid #3A4D39;
+  border: 2px solid #070a07;
   text-decoration: none;
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   display: flex;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .home-actions {
@@ -68,6 +102,7 @@
   background-color: #FFFFFF;
   text-decoration: none;
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+  justify-content: center;
 }
 
 .categories-card-hp {
@@ -119,6 +154,7 @@
 
 .category-card-hp {
   color: #FFFFFF;
+  background-color: #000000;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -126,26 +162,33 @@
   padding: 5px;
   width: 85px;
   height: 85px;
+  font-weight: bold;
+  font-size: small;
 }
 
 .genres-txt {
   color: #000000;
+  text-decoration: none;
+
 }
 
 .create-button {
   color: #FFFFFF;
-  background-color: #4F6F52;
+  background-color: #000000;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 50px;
+  font-size: large;
+
 }
 
 .wic {
   padding: 10px;
   background-color: #D9D9D9;
+  width: 650px;
 }
 
 .image-card-hp {

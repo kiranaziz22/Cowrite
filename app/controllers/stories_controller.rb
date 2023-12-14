@@ -13,6 +13,7 @@ class StoriesController < ApplicationController
     @collab = Collab.new
     @review = Review.new
     @stories = Story.all
+   
   end
 
   def new

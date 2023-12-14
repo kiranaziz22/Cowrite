@@ -1,6 +1,13 @@
-<h1>All <%= @category.genre %> stories !</h1>
+<h1><%= @category.genre %></h1>
 
-<% @stories.each do |story| %>
-  <p><a href="<%= story_path(story.id)%>"style="background-image: url(https://picsum.photos/200)">
-  <%= story.title %></a></p>
-<% end %>
+<div class="stories-idx-cat">
+  <% @stories.each do |story| %>
+    <a href="<%= story_path(story.id)%>" class="story-card-idx">
+      <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
+      <div class="story-info-idx">
+        <h3 class="story-title-hp"><%= story.title %></h3>
+        <p><%= story.synopsis %></p>
+      </div>
+    </a>
+  <% end %>
+</div>

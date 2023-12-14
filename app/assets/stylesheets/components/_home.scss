@@ -105,6 +105,12 @@
   justify-content: center;
 }
 
+.story-title-hp {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .categories-card-hp {
   width: 100%;
   height: 280px;

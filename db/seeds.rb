@@ -31,36 +31,58 @@ category1.photo.attach(io: category_1_photo, filename: "#{category1.genre}.png",
 category1.save
 
 category2 = Category.create(genre: "Thriller")
+category_2_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category2.photo.attach(io: category_2_photo, filename: "#{category2.genre}.png", content_type: "image/png")
 category2.save
 
 category3 = Category.create(genre: "Fiction")
+category_3_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category3.photo.attach(io: category_3_photo, filename: "#{category3.genre}.png", content_type: "image/png")
 category3.save
 
 category4 = Category.create(genre: "Sci-Fi")
+category_4_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category4.photo.attach(io: category_4_photo, filename: "#{category4.genre}.png", content_type: "image/png")
 category4.save
 
 category5 = Category.create(genre: "Fantasy")
+category_5_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category5.photo.attach(io: category_5_photo, filename: "#{category5.genre}.png", content_type: "image/png")
 category5.save
 
 category6 = Category.create(genre: "Romance")
+category_6_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category6.photo.attach(io: category_6_photo, filename: "#{category6.genre}.png", content_type: "image/png")
 category6.save
 
 category7 = Category.create(genre: "Comedy")
+category_7_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category7.photo.attach(io: category_7_photo, filename: "#{category7.genre}.png", content_type: "image/png")
 category7.save
 
 category8 = Category.create(genre: "Adventure")
+category_8_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category8.photo.attach(io: category_8_photo, filename: "#{category8.genre}.png", content_type: "image/png")
 category8.save
 
 category9 = Category.create(genre: "Dystopian")
+category_9_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category9.photo.attach(io: category_9_photo, filename: "#{category9.genre}.png", content_type: "image/png")
 category9.save
 
 category10 = Category.create(genre: "Historical")
+category_10_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category10.photo.attach(io: category_10_photo, filename: "#{category10.genre}.png", content_type: "image/png")
 category10.save
 
 category11 = Category.create(genre: "Essay")
+category_11_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category11.photo.attach(io: category_11_photo, filename: "#{category11.genre}.png", content_type: "image/png")
 category11.save
 
 category12 = Category.create(genre: "Poetry")
+category_12_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+category12.photo.attach(io: category_12_photo, filename: "#{category12.genre}.png", content_type: "image/png")
 category12.save
 
 story1 = Story.create(title: "Ephemeral Shadows", genre: "Horror",
@@ -80,7 +102,7 @@ story_1_photo = URI.open("https://images.unsplash.com/photo-1509248961158-e54f69
 story1.photos.attach(io: story_1_photo, filename: "#{story1.title}.png", content_type: "image/png")
 story1.save
 
-story2 = Story.create(title: "Whispers in the Concrete Jungle", genre: "Thriller",
+story2 = Story.create(title: "Whispers in the Jungle", genre: "Thriller",
 content: "In the pulsating heart of Nightshade City, Detective Rachel Turner stumbled upon a web of corruption reaching the highest echelons of power. A cryptic message left at crime scenes hinted at a clandestine organization orchestrating the city's chaos. As Rachel delved deeper, she found herself entangled with Ethan, a former intelligence operative haunted by his own demons.
 Whispers in the Concrete Jungle weaved a tale of deception and suspense as Rachel and Ethan raced against time to unravel the conspiracy. The city's skyline, once a symbol of aspiration, became a foreboding backdrop to their perilous pursuit of truth. As the mysterious organization tightened its grip, the duo faced unexpected allies and enemies within the city's intricate social fabric.
 In the gripping climax, Rachel and Ethan discovered the shocking truth—a nefarious plot to manipulate the city for unfathomable gains. The metropolis, it seemed, was a pawn in a larger game of power and control. Whispers in the Concrete Jungle unfolded as a relentless thriller, where the city's every corner concealed a revelation, and the line between ally and adversary blurred in the relentless pursuit of justice.",

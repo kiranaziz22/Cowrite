@@ -37,11 +37,12 @@
     <div class="top-stories">
       <h4>Top stories</h4>
       <div class="stories-cards">
+
         <% @stories.each do |story| %>
           <a href="<%= story_path(story.id)%>" class="story-card-hp">
             <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
             <div class="story-info-hp">
-              <h3><%= story.title %></h3>
+              <h3 class="story-title-hp"><%= story.title %></h3>
               <p><%= story.synopsis %></p>
             </div>
           </a>
@@ -49,15 +50,15 @@
       <p><a href="<%= stories_path %>"class="create-button">Find inspiration </a></p>
       </div>
     </div>
+
     <div class="genres-wis">
       <h3><a href="<%= new_story_path %>" class="create-button" >
-        Add a new story!
-      </a></h3>
+        Add a new story!</a></h3>
       <div class="categories-card-hp" >
         <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">
           <% @categories.each do |category| %>
-            <a href="<%= category_path(category.id) %>" class="category-card-hp" >
+              <a href="<%= category_path(category.id) %>" class="category-card-hp" >
               <%= category.genre  %>
             </a>
           <% end %>

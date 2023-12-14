@@ -21,13 +21,17 @@
               <h4><%= @user.first_name %> <%= @user.last_name %></h4>
             </div>
           </div>
+
           <div class="p-4 text-black">
             <div class="d-flex justify-content-between text-center py-1">
               <div>
                <h4>My Stories</h4>
+               <div class="profilestories">
+
                   <% @user_stories.each do |story| %>
                   <%= link_to story.title, story_path(story)  %>
                   <% end %>
+               </div>
               </div>
               <div class="px-3">
                       <h4> My Collaborations </h4>

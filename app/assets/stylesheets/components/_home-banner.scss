@@ -3,6 +3,8 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  background-position: top;
+  height: 600px;
 }
 
 .banner h1 {
@@ -15,7 +17,7 @@
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(0, 0, 0);
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -23,4 +25,11 @@
 }
 .banner-text{
   margin-left: 50px;
+  padding-block: 20px;
+}
+
+ #element {
+
+  font-size: 25px;
+  padding-top: 200px; /*  color: white; */
 }

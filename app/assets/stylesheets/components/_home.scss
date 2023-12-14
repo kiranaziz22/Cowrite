@@ -7,8 +7,13 @@
 .home-page-content {
   margin-top: 10px;
   display: flex;
+  flex-direction: row;
+
+  padding-right: 50px;
+  padding-left: 50px;
+
   justify-content: center;
-  gap: 30px;
+ /*  gap: 10px; */
 
 }
 
@@ -18,28 +23,30 @@
   flex-direction: column;
   display:flex;
   justify-content: center;
-  width: 600px;
+  width: 800px;
   min-width: 200px;
   /* max-width: 600px; */
   border-radius: none;
   outline-color: #000;
-  outline-width: 4px;
+  outline-width: 100px;
   padding-top: 20px;
   padding-left: 200px;
   margin-left: 20%;
+
 }
 
 .btn-search{
   margin-left: 10px;
   background-color: #000000;
   color: white;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 
  .form-control:focus {
-  box-shadow: 0 0 0 0.25rem rgba(173, 165, 161, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(16, 15, 15, 0.796);
   border-color: $cloud;
 }
+
 
 
 .form-control {
@@ -50,7 +57,7 @@
   padding: 20;
   background-color:$carrara;
   outline-color: $cloud;
-  box-shadow: 0 0 5px rgba(195, 194, 194, 0.2);
+  box-shadow: 0 0 50px rgba(20, 19, 19, 0.596);
 }
 
 .stories-cards {
@@ -79,6 +86,14 @@
   gap: 20px;
 }
 
+.genres-wis {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 10px;
+  padding-inline-start: 50px;
+}
+
 .profile-card {
   width: 650px;
   height: 170px;
@@ -105,6 +120,7 @@
   color: rgb(0, 0, 0);
   background-color: #FFFFFF;
   text-decoration: none;
+  margin-top: 20px;
 }
 
 .categories-cards-hp {
@@ -113,6 +129,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   place-items: center;
+  position: relative;
 }
 
 .category-card-hp {
@@ -144,7 +161,10 @@
   align-items: center;
   padding: 20px;
   border-radius: 50px;
-  font-size: large;
+  border-color: $carrara;
+  font-size: 25px;
+  width: fit-content;
+  margin-left: 180px;
 
 }
 
@@ -152,6 +172,9 @@
   padding: 10px;
   background-color: #D9D9D9;
   width: 650px;
+  /* margin-top: 500px; */
+  width: 650px;
+  height: 200px;
 }
 
 .image-card-hp {

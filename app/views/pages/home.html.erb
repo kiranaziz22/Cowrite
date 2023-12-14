@@ -40,7 +40,7 @@
           <a href="<%= story_path(story.id)%>" class="story-card-hp">
             <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
             <div class="story-info-hp">
-              <h3><%= story.title %></h3>
+              <h3 class="story-title-hp"><%= story.title %></h3>
               <p><%= story.synopsis %></p>
             </div>
           </a>

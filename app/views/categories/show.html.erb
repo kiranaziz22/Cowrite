@@ -1,13 +1,36 @@
-<h1><%= @category.genre %></h1>
-
-<div class="stories-idx-cat">
-  <% @stories.each do |story| %>
-    <a href="<%= story_path(story.id)%>" class="story-card-idx">
-      <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
-      <div class="story-info-idx">
-        <h3 class="story-title-hp"><%= story.title %></h3>
-        <p><%= story.synopsis %></p>
+<div>
+  <div class="idx-content">
+    <div>
+      <div class="infos-n-path">
+      <h5><strong>Most recent</strong></h5>
+      <a href="<%= categories_path %>" class="genres-txt-idx"><h5><strong>All categories</strong></h5></a>
       </div>
-    </a>
-  <% end %>
+      <div class="stories-idx-cat">
+        <% @stories.each do |story| %>
+          <a href="<%= story_path(story.id)%>" class="story-card-idx">
+            <%= cl_image_tag story.photos.first.key, class:"image-card-idx" %>
+            <div class="story-info-idx">
+              <h3 class="story-title-hp"><%= story.title %></h3>
+              <p><%= story.synopsis %></p>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <div class="recs-idx">
+        <h2 class="text-center">Top <%= @category.genre %> picks</h2>
+        <div class="stories-top-recs">
+        <% @stories.sample(5).each do |story| %>
+            <a href="<%= story_path(story.id)%>" class="story-card-idx-rec">
+              <%= cl_image_tag story.photos.first.key, class:"image-card-idx-rec" %>
+              <div class="story-info-idx-recs">
+                <%= story.title %>
+              </div>
+            </a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

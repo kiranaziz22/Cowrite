@@ -1,7 +1,8 @@
 <div class="banner" style="banner_notepad.PNG">
   <div class="banner-text">
     <h1>Welcome to  <strong>Co-Write</strong></h1>
-      <p>The home of creative writing collaborations</p>
+      <h5>The home of creative<h5>
+        <h5>writing collaborations<h5>
              <!-- Element to contain animated typing -->
       <span id="element"></span>
 
@@ -11,9 +12,10 @@
       <!-- Setup and start animation! -->
       <script class="typewriter">
         var typed = new Typed('#element', {
-          strings: ['Pick a story', 'Have a read', 'Write a chapter', 'Collaborate with others', 'Find your inspiration'],
-          typeSpeed: 30,
+         class: "typo", strings:  ['Pick a story', 'Have a read', 'Write a chapter', 'Collaborate with others', 'Find your inspiration'],
+          typeSpeed: 60,
           loop: true,
+
         });
       </script>
 
@@ -35,6 +37,7 @@
     <div class="top-stories">
       <h4>Top stories</h4>
       <div class="stories-cards">
+
         <% @stories.each do |story| %>
           <a href="<%= story_path(story.id)%>" class="story-card-hp">
             <%= cl_image_tag story.photos.first.key, class:"image-card-hp" %>
@@ -47,6 +50,9 @@
       <p><a href="<%= stories_path %>"class="create-button">See all stories </a></p>
       </div>
     </div>
+
+    <div class="genres-wis">
+
     <div class="home-actions">
       <% if user_signed_in? %>
         <a href="<%= profile_path(@user.id) %>" class="profile-card" >
@@ -61,6 +67,7 @@
           <h3>Connect !</h3>
         </a>
       <% end %>
+
       <div class="categories-card-hp" >
         <a href="<%= categories_path %>" class="pb-2 genres-txt"><h3>Genres</h3></a>
         <div class="categories-cards-hp">

@@ -6,46 +6,58 @@
         <div class="card">
           <div class="rounded-top text-white d-flex flex-row" style="background-image: url(<%= image_path 'green_banner.webp'%>)" >
             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                <% if @user.photo.attached? %>
+              <% if @user.photo.attached? %>
                 <%= cl_image_tag @user.photo.key, style:"width: 150px; z-index: 1" %>
-                <% else %>
+              <% else %>
                 <%= image_tag "blankprofile.png",style:"width: 150px; z-index: 1"%>
+              <% end %>
+              <% if @user == current_user %>
+                <%= link_to edit_user_registration_path do %>
+                  <i class="fa fa-edit" style="font-size:24px;color:white"></i>
                 <% end %>
-                <% if @user == current_user %>
-              <%= link_to edit_user_registration_path do %>
-             <i class="fa fa-edit" style="font-size:24px;color:white"></i>
-            <% end %>
-            <% end %>
+              <% end %>
             </div>
             <div class="ms-3" style="margin-top: 130px;">
               <h4><%= @user.first_name %> <%= @user.last_name %></h4>
             </div>
           </div>
-
-          <div class="p-4 text-black">
-            <div class="d-flex justify-content-between text-center py-1">
-              <div>
-               <h4>My Stories</h4>
-               <div class="profilestories">
-
+          <div class="container-fluid">
+          <div class="d-flex">
+            <div class="col-lg-6 p-4 text-black">
+              <div class=" justify-content-between text-center ">
+                <h4 class="profileheading">My Stories</h4>
+                <div class="profilestories">
                   <% @user_stories.each do |story| %>
-                  <%= link_to story.title, story_path(story)  %>
-                  <% end %>
-               </div>
-              </div>
-              <div class="px-3">
-                      <h4> My Collaborations </h4>
-                      <% @user_collabs.each do |collab| %>
-                      <p><%= link_to collab.story.title, story_path(collab.story)  %></p>
-
+                    <%= link_to story_path(story), class: 'btn-profile' do %>
+                      <div class="card-product">
+                        <%= cl_image_tag story.photos.first.key, alt:"story image", class: "img" %>
+                        <div class="card-product-infos">
+                          <h3><%= story.title %></h3>
+                        </div>
+                      </div>
                     <% end %>
+                  <% end %>
+                </div>
               </div>
             </div>
+
+              <div class="col-lg-6 justify-content-end text-center py-4">
+                <h4 class="profileheading"> My Collaborations </h4>
+                <% @user_collabs.each do |collab| %>
+                  <%= link_to story_path(collab.story), class: 'btn-profile' do %>
+                     <div class="card-product">
+                        <%= cl_image_tag collab.story.photos.first.key, alt:"story image", class: "img" %>
+                        <div class="card-product-infos">
+                          <h3><%= collab.story.title %></h3>
+                        </div>
+                      </div>
+                      <% end %>
+                  <% end %>
+              </div>
           </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
